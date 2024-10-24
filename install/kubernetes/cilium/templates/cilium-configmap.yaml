@@ -90,6 +90,7 @@ kind: ConfigMap
 metadata:
   name: cilium-config
   namespace: {{ include "cilium.namespace" . }}
+  
 data:
 {{- if .Values.etcd.enabled }}
   # The kvstore configuration is used to enable use of a kvstore for state
